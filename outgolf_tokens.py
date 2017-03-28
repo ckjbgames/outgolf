@@ -4,10 +4,11 @@
 # The tokens for the Outgolf compiler. #
 # ckjbgames 2017 #######################
 ########################################
-import re
+import re, string
 def tokenize(code):
     """
     Tokenize the code.
     """
-    tokens=[]
-    whitespace=r'\s
+    tokenized=[]
+    whitespace=r'\s'
+    for c in code:
